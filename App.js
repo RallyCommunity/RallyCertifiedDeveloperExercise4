@@ -14,7 +14,7 @@ Ext.define('CustomApp', {
         
         
         // example data structure format to send to report render function
-        mockData = {        
+        var mockData = {        
             'backlog': 10,
             'inprogress': 5,
             'completed': 15,
