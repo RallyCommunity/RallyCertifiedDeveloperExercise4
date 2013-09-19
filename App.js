@@ -12,21 +12,21 @@ Ext.define('CustomApp', {
              operator: '=',
              value: 'Defined'
         });
-        var myFilters = myFilters.or(
+        myFilters = myFilters.or(
             Ext.create('Rally.data.QueryFilter', {
                  property: 'ScheduleState',
                  operator: '=',
                  value: 'In-Progress'
             }) 
         );
-        var myFilters = myFilters.or(
+        myFilters = myFilters.or(
             Ext.create('Rally.data.QueryFilter', {
                  property: 'ScheduleState',
                  operator: '=',
                  value: 'Completed'
             }) 
         );
-        var myFilters = myFilters.or(
+        myFilters = myFilters.or(
             Ext.create('Rally.data.QueryFilter', {
                  property: 'ScheduleState',
                  operator: '=',
@@ -99,7 +99,7 @@ Ext.define('CustomApp', {
                     pointPadding: 0.2,
                     borderWidth: 0
                 }
-            },
+            }
         };
         
         var myChartData = {
@@ -115,7 +115,7 @@ Ext.define('CustomApp', {
             }, {
                 name: 'Accepted',
                 data: [myData['Accepted']]
-            },]
+            }]
         };
 
         var myChart = Ext.create('Rally.ui.chart.Chart', {

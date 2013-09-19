@@ -21,21 +21,21 @@
              operator: '=',
              value: 'Defined'
         });
-        var myFilters = myFilters.or(
+        myFilters = myFilters.or(
             Ext.create('Rally.data.QueryFilter', {
                  property: 'ScheduleState',
                  operator: '=',
                  value: 'In-Progress'
             }) 
         );
-        var myFilters = myFilters.or(
+        myFilters = myFilters.or(
             Ext.create('Rally.data.QueryFilter', {
                  property: 'ScheduleState',
                  operator: '=',
                  value: 'Completed'
             }) 
         );
-        var myFilters = myFilters.or(
+        myFilters = myFilters.or(
             Ext.create('Rally.data.QueryFilter', {
                  property: 'ScheduleState',
                  operator: '=',
@@ -73,7 +73,7 @@
         this.renderChart(myData);
     },
     renderChart: function(myData) {
-        console.log('foo', myData);
+
         var myChartConfig = {
             chart: {
                 type: 'column'
@@ -108,7 +108,7 @@
                     pointPadding: 0.2,
                     borderWidth: 0
                 }
-            },
+            }
         };
         
         var myChartData = {
@@ -124,7 +124,7 @@
             }, {
                 name: 'Accepted',
                 data: [myData['Accepted']]
-            },]
+            }]
         };
 
         var myChart = Ext.create('Rally.ui.chart.Chart', {
