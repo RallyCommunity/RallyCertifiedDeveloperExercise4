@@ -64,7 +64,7 @@ Ext.define('CustomApp', {
         this.renderChart(myData);
     },
     renderChart: function(myData) {
-        console.log('foo', myData);
+
         var myChartConfig = {
             chart: {
                 type: 'column'
